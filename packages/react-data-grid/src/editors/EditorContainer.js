@@ -60,6 +60,7 @@ class EditorContainer extends React.Component {
   };
 
   onKeyDown = (e: SyntheticKeyboardEvent) => {
+    console.log('e.target.tagName'+e.target.tagName)
     if (isCtrlKeyHeldDown(e)) {
       this.checkAndCall('onPressKeyWithCtrl', e);
     } else if (this.isKeyExplicitlyHandled(e.key)) {
